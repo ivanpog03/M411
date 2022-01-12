@@ -3,27 +3,27 @@ public class Quicksort implements Sortieralgorithmus{
     }
 
     @Override
-    public void sort(int[] liste) {
+    public void sort(double[] liste) {
 
     }
 
     @Override
-    public int getVergleiche() {
+    public double getVergleiche() {
         return 0;
     }
 
     @Override
-    public int getZeit() {
+    public double getZeit() {
         return 0;
     }
 
     @Override
-    public int getSpeicherbedarf() {
+    public double getSpeicherbedarf() {
         return 0;
     }
 
     @Override
-    public int getSchreibzugriffe() {
+    public double getSchreibzugriffe() {
         return 0;
     }
 }

@@ -1,23 +1,23 @@
 public interface Sortieralgorithmus {
 
 
-    public default void sort(int[] liste){
+    public default void sort(double[] liste){
 
     }
 
-    public default int getVergleiche(){
+    public default double getVergleiche(){
         return 0;
     }
 
-    public default int getZeit(){
+    public default double getZeit(){
         return 0;
     }
 
-    public default int getSpeicherbedarf(){
+    public default double getSpeicherbedarf(){
         return 0;
     }
 
-    public default int getSchreibzugriffe(){
+    public default double getSchreibzugriffe(){
         return 0;
     }
 
