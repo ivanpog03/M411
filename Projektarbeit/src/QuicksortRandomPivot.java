@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class QuicksortRandom implements Sortieralgorithmus{
+public class QuicksortRandomPivot implements Sortieralgorithmus{
     private int vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
