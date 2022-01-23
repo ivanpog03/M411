@@ -1,11 +1,10 @@
 public interface Sortieralgorithmus {
 
 
-    public default void sort(double[] liste){
-
+    public default void sort(int[] liste){
     }
 
-    public default double getVergleiche(){
+    public default int getVergleiche(){
         return 0;
     }
 
@@ -13,12 +12,11 @@ public interface Sortieralgorithmus {
         return 0;
     }
 
-    public default double getSpeicherbedarf(){
-        return 0;
+    public default long getSpeicherbedarf(){
+        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
     }
 
-    public default double getSchreibzugriffe(){
+    public default int getSchreibzugriffe(){
         return 0;
     }
-
 }
