@@ -5,14 +5,6 @@ public class Heapsort implements Sortieralgorithmus{
     private int length;
     private int[] liste;
 
-    public static void main(String[] args) {
-        Sortieralgorithmus algo = new Heapsort();
-        int[] liste = {9,8,7,-1331312 ,5,6,4,3,2,1};
-        algo.sort(liste);
-        System.out.println("\n" + algo.getVergleiche());
-        System.out.println(algo.getZeit());
-        System.out.println(algo.getSchreibzugriffe());
-    }
 
     @Override
     public void sort(int[] liste) {
