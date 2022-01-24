@@ -146,12 +146,6 @@ public class KUI{
         sheetBST.createRow(2);
         sheetBST.createRow(3);
 
-
-
-
-
-
-
         KUI kui=new KUI();
 
 
@@ -175,28 +169,9 @@ public class KUI{
         int[] teilsortiert10000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Teilsortiert10000.dat");
        // System.out.println(Arrays.toString(teilsortiert10000));
         int[] teilsortiert100000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Teilsortiert100000.dat");
-        //System.out.println(Arrays.toString(teilsortiert100000));
+        //System.out.println(Arrays.toString(teilsortiert100000))
 
-
-
-
-
-
-        /*
-        for(int ii=0;ii<inversTeilSortiert10000.length;ii++){
-            sheet.createRow(ii).createCell(1).setCellValue(inversTeilSortiert10000[ii]);
-        }
-
-        for(int i=0;i<inversTeilSortiert1000.length;i++){
-            sheet.getRow(i).createCell(0).setCellValue(inversTeilSortiert1000[i]);
-        }
-*/
         //Sortieren
-
-
-
-
-
 
         kui.quicksortFirstPivot(inversTeilSortiert1000, 0);
         kui.quicksortFirstPivot(inversTeilSortiert10000, 1);
