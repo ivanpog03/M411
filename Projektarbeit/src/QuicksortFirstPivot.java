@@ -16,8 +16,8 @@ public class QuicksortFirstPivot implements Sortieralgorithmus{
 
     int partition(int start, int end) {
         int pivot = liste[start];
-        int p1 = start+1;
-        for(int i = start+1; i <= end; i++) {
+        int p1 = start + 1;
+        for(int i = start + 1; i <= end; i++) {
             if(liste[i] < pivot) {
                 if(i != p1) {
                     int temp = liste[p1];
@@ -34,7 +34,7 @@ public class QuicksortFirstPivot implements Sortieralgorithmus{
         liste[start] = liste[p1-1];
         liste[p1-1] = pivot;
         schreibzugriffe += 2;
-        return p1-1;
+        return p1 - 1;
     }
 
 
