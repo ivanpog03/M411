@@ -150,25 +150,25 @@ public class KUI{
 
 
 
-        int[] inversTeilSortiert1000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\InversTeilsortiert1000.dat");
-        // System.out.println(Arrays.toString(inversTeilSortiert1000));
-        int[] inversTeilSortiert10000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\InversTeilsortiert10000.dat");
+        int[] inversTeilSortiert1000= readFiles("Testdaten\\InversTeilsortiert1000.dat");
+       // System.out.println(Arrays.toString(inversTeilSortiert1000));
+        int[] inversTeilSortiert10000= readFiles("Testdaten\\InversTeilsortiert10000.dat");
         //System.out.println(Arrays.toString(inversTeilSortiert10000));
-        int[] inversTeilSortiert100000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\InversTeilsortiert100000.dat");
-        // System.out.println(Arrays.toString(inversTeilSortiert100000));
+        int[] inversTeilSortiert100000= readFiles("Testdaten\\InversTeilsortiert100000.dat");
+       // System.out.println(Arrays.toString(inversTeilSortiert100000));
 
-        int[] random1000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Random1000.dat");
-        // System.out.println(Arrays.toString(random1000));
-        int[] random10000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Random10000.dat");
-        // System.out.println(Arrays.toString(random10000));
-        int[] random100000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Random100000.dat");
-        // System.out.println(Arrays.toString(random100000));
+        int[] random1000= readFiles("Testdaten\\Random1000.dat");
+       // System.out.println(Arrays.toString(random1000));
+        int[] random10000= readFiles("Testdaten\\Random10000.dat");
+       // System.out.println(Arrays.toString(random10000));
+        int[] random100000= readFiles("Testdaten\\Random100000.dat");
+       // System.out.println(Arrays.toString(random100000));
 
-        int[] teilsortiert1000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Teilsortiert1000.dat");
-        // System.out.println(Arrays.toString(teilsortiert1000));
-        int[] teilsortiert10000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Teilsortiert10000.dat");
-        // System.out.println(Arrays.toString(teilsortiert10000));
-        int[] teilsortiert100000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Teilsortiert100000.dat");
+        int[] teilsortiert1000= readFiles("Testdaten\\Teilsortiert1000.dat");
+       // System.out.println(Arrays.toString(teilsortiert1000));
+        int[] teilsortiert10000= readFiles("Testdaten\\Teilsortiert10000.dat");
+       // System.out.println(Arrays.toString(teilsortiert10000));
+        int[] teilsortiert100000= readFiles("Testdaten\\Teilsortiert100000.dat");
         //System.out.println(Arrays.toString(teilsortiert100000))
 
         //Sortieren
@@ -236,13 +236,13 @@ public class KUI{
 
         kui.bST(inversTeilSortiert1000,0);
         kui.bST(inversTeilSortiert10000,1);
-        //kui.bST(inversTeilSortiert100000,2);
+        kui.bST(inversTeilSortiert100000,2);
         kui.bST(random1000,3);
         kui.bST(random10000,4);
-        //kui.bST(random100000,5);
+        kui.bST(random100000,5);
         kui.bST(teilsortiert1000,6);
         kui.bST(teilsortiert10000,7);
-        //kui.bST(teilsortiert100000,8);
+        kui.bST(teilsortiert100000,8);
 
 
 
