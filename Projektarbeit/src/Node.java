@@ -1,3 +1,6 @@
+/**
+ * @author Hermann Witte
+ */
 class Node{
     int value;
     Node left;

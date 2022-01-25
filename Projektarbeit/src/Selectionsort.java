@@ -1,20 +1,34 @@
+import java.util.concurrent.ScheduledExecutorService;
+
+/**
+ * @author Hermann Witte
+ * @since 12.01.2022
+ *
+ */
 public class Selectionsort implements Sortieralgorithmus{
     private int vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
     private int length;
-    private int[] liste;
 
+
+    /**
+     * @param liste Die zu sortierende Liste als Array.
+     * @return Gibt die Sortierte Liste in form eines Arrays zurück.
+     */
     @Override
-    public void sort(int[] liste) {
+    public int[] sort(int[] liste) {
         zeit = System.nanoTime();
         length = liste.length;
-        this.liste = liste;
-        selectionSort();
+        selectionSort(liste);
+        return liste;
     }
 
-
-    public void selectionSort(){
+    /**
+     * Die Methode sortiert die Liste mittels Selectionsort.
+     * @param liste Die Methode benötigt das zu sortierende Array.
+     */
+    public void selectionSort(int[] liste){
         for (int i = 0; i < length; i++) {
             for (int j = i + 1; j < length; j++) {
                 if (liste[i] > liste[j]) {
@@ -29,21 +43,33 @@ public class Selectionsort implements Sortieralgorithmus{
         zeit = (System.nanoTime() - zeit)/ 1_000_000_000.0;
     }
 
+    /**
+     * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
+     */
     @Override
     public int getVergleiche() {
         return vergleiche;
     }
 
+    /**
+     * @return Gibt die Zeit, welche der Algorithmus benötigt hat um das Array zu sortieren zurück.
+     */
     @Override
     public double getZeit() {
         return zeit;
     }
 
+    /**
+     * @return Gibt den Speicherbedarf des Algorithmus, inklusive des zu sortierende Array zurück.
+     */
     @Override
     public long getSpeicherbedarf() {
         return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
     }
 
+    /**
+     * @return Gibt die Anzahl der Speicherzugriffe auf das zu sortierende Array zurück.
+     */
     @Override
     public int getSchreibzugriffe() {
         return schreibzugriffe;

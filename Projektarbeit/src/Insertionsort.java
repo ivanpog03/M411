@@ -1,3 +1,6 @@
+/**
+ *
+ */
 public class Insertionsort implements Sortieralgorithmus {
     private int vergleiche = 0;
     private double zeit;
@@ -5,15 +8,24 @@ public class Insertionsort implements Sortieralgorithmus {
     private int length;
     private int[] liste;
 
+    /**
+     *
+     * @param liste
+     * @return
+     */
     @Override
-    public void sort(int[] liste) {
+    public int[] sort(int[] liste) {
         zeit = System.nanoTime();
         length = liste.length;
         this.liste = liste;
         insertionsort();
         zeit = (System.nanoTime() - zeit)/ 1_000_000_000.0;
+        return this.liste;
     }
 
+    /**
+     *
+     */
     private void insertionsort() {
         int b;
         int tmp;
@@ -35,21 +47,37 @@ public class Insertionsort implements Sortieralgorithmus {
         vergleiche++;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getVergleiche() {
         return vergleiche;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public double getZeit() {
         return zeit;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public long getSpeicherbedarf() {
         return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getSchreibzugriffe() {
         return schreibzugriffe;

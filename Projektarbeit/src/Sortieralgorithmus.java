@@ -1,7 +1,8 @@
 public interface Sortieralgorithmus {
 
 
-    public default void sort(int[] liste){
+    public default int[] sort(int[] liste){
+        return null;
     }
 
     public default int getVergleiche(){

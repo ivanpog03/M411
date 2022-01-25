@@ -1,3 +1,7 @@
+/**
+ *
+ */
+
 import java.util.Random;
 
 public class QuicksortRandomPivot implements Sortieralgorithmus{
@@ -7,15 +11,27 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
     private int length;
     private int[] liste;
 
+    /**
+     *
+     * @param liste
+     * @return
+     */
     @Override
-    public void sort(int[] liste) {
+    public int[] sort(int[] liste) {
         zeit = System.nanoTime();
         length = liste.length;
         this.liste = liste;
         quicksort(0, length-1);
         zeit = (System.nanoTime() - zeit)/ 1_000_000_000.0;
+        return this.liste;
     }
 
+    /**
+     *
+     * @param arr
+     * @param low
+     * @param high
+     */
     public void random(int arr[],int low,int high){
         Random rand = new Random();
         int pivot = rand.nextInt(high-low)+low;
@@ -26,6 +42,12 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
         schreibzugriffe++;
     }
 
+    /**
+     *
+     * @param low
+     * @param high
+     * @return
+     */
     public int partition(int low, int high) {
         random(liste,low,high);
         int pivot = liste[high];
@@ -51,7 +73,11 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
         return i+1;
     }
 
-
+    /**
+     *
+     * @param low
+     * @param high
+     */
     public void quicksort(int low, int high) {
         if (low < high) {
             vergleiche++;
@@ -62,21 +88,37 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
         vergleiche++;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getVergleiche() {
         return vergleiche;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public double getZeit() {
         return zeit;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public long getSpeicherbedarf() {
         return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getSchreibzugriffe() {
         return schreibzugriffe;

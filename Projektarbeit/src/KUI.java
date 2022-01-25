@@ -151,23 +151,23 @@ public class KUI{
 
 
         int[] inversTeilSortiert1000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\InversTeilsortiert1000.dat");
-       // System.out.println(Arrays.toString(inversTeilSortiert1000));
+        // System.out.println(Arrays.toString(inversTeilSortiert1000));
         int[] inversTeilSortiert10000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\InversTeilsortiert10000.dat");
         //System.out.println(Arrays.toString(inversTeilSortiert10000));
         int[] inversTeilSortiert100000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\InversTeilsortiert100000.dat");
-       // System.out.println(Arrays.toString(inversTeilSortiert100000));
+        // System.out.println(Arrays.toString(inversTeilSortiert100000));
 
         int[] random1000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Random1000.dat");
-       // System.out.println(Arrays.toString(random1000));
+        // System.out.println(Arrays.toString(random1000));
         int[] random10000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Random10000.dat");
-       // System.out.println(Arrays.toString(random10000));
+        // System.out.println(Arrays.toString(random10000));
         int[] random100000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Random100000.dat");
-       // System.out.println(Arrays.toString(random100000));
+        // System.out.println(Arrays.toString(random100000));
 
         int[] teilsortiert1000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Teilsortiert1000.dat");
-       // System.out.println(Arrays.toString(teilsortiert1000));
+        // System.out.println(Arrays.toString(teilsortiert1000));
         int[] teilsortiert10000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Teilsortiert10000.dat");
-       // System.out.println(Arrays.toString(teilsortiert10000));
+        // System.out.println(Arrays.toString(teilsortiert10000));
         int[] teilsortiert100000= readFiles("C:\\Users\\vapot\\OneDrive - Bildungszentrum Zürichsee\\Module\\M411\\UB09\\Testdaten\\Teilsortiert100000.dat");
         //System.out.println(Arrays.toString(teilsortiert100000))
 

@@ -1,19 +1,32 @@
+/**
+ * @author Hermann Witte
+ */
 public class Mergesort implements Sortieralgorithmus{
     private int vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
-    private int length;
-    private int[] liste;
 
+    /**
+     * Die Methode gibt den Benötigten Attributen ihren wert und startet den Algorithmus mittels
+     * aufruf der methode mergesort().
+     * @param liste Die zu sortierende Liste als Array.
+     * @return Gibt die Sortierte Liste in form eines Arrays zurück.
+     */
     @Override
-    public void sort(int[] liste) {
+    public int[] sort(int[] liste) {
         zeit = System.nanoTime();
-        length = liste.length;
-        this.liste = mergesort(liste);
+        liste = mergesort(liste);
         schreibzugriffe++;
         zeit = (System.nanoTime() - zeit)/ 1_000_000_000.0;
+        return liste;
     }
 
+    /**
+     * Die Methode speichert mittels Rekursion alle zahlen in einzelne Arrays und ruft
+     * anschliessend die Methode verschmelze() auf.
+     * @param a Die Methode benötigt das zu sortierende Array
+     * @return Gibt das sortierte array zurück
+     */
     public  int[] mergesort(int[] a) {
         if (a.length > 1) {
             vergleiche++;
@@ -44,6 +57,13 @@ public class Mergesort implements Sortieralgorithmus{
         }
     }
 
+    /**
+     * Die Methode pberprüft welches der beiden Werte in den Arrays grösser ist und
+     * führt diese dann korrekt (in der richtigen Reihenfolge) zusammen.
+     * @param l Das linke Array
+     * @param r Das rechte Array
+     * @return Das neue, "verschmelzte" Array.
+     */
     private int[] verschmelze(int[] l, int[] r) {
         int[] neul = new int[l.length + r.length];
         int indexl = 0;
@@ -84,21 +104,33 @@ public class Mergesort implements Sortieralgorithmus{
         return neul;
     }
 
+    /**
+     * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
+     */
     @Override
     public int getVergleiche() {
         return vergleiche;
     }
 
+    /**
+     * @return Gibt die Zeit, welche der Algorithmus benötigt hat um das Array zu sortieren zurück.
+     */
     @Override
     public double getZeit() {
         return zeit;
     }
 
+    /**
+     * @return Gibt den Speicherbedarf des Algorithmus, inklusive des zu sortierende Array zurück.
+     */
     @Override
     public long getSpeicherbedarf() {
         return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
     }
 
+    /**
+     * @return Gibt die Anzahl der Speicherzugriffe auf das zu sortierende Array zurück.
+     */
     @Override
     public int getSchreibzugriffe() {
         return schreibzugriffe;
