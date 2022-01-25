@@ -106,9 +106,6 @@ public class KUI{
 
     }
 
-
-
-
     public static void main(String[] args) throws IOException {
 
         sheetQuicksortFirstPivot.createRow(0);
@@ -173,7 +170,7 @@ public class KUI{
 
         //Sortieren
 
-        kui.quicksortFirstPivot(inversTeilSortiert1000, 0);
+       kui.quicksortFirstPivot(inversTeilSortiert1000, 0);
         kui.quicksortFirstPivot(inversTeilSortiert10000, 1);
         kui.quicksortFirstPivot(inversTeilSortiert100000, 2);
         kui.quicksortFirstPivot(random1000, 3);

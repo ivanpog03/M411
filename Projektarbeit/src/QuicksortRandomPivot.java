@@ -1,5 +1,5 @@
 /**
- *
+ * @author Hermann Witte
  */
 
 import java.util.Random;
@@ -89,8 +89,7 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
     }
 
     /**
-     *
-     * @return
+     * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
      */
     @Override
     public int getVergleiche() {
@@ -98,8 +97,7 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
     }
 
     /**
-     *
-     * @return
+     * @return Gibt die Zeit, welche der Algorithmus benötigt hat um das Array zu sortieren zurück.
      */
     @Override
     public double getZeit() {
@@ -107,8 +105,7 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
     }
 
     /**
-     *
-     * @return
+     * @return Gibt den Speicherbedarf des Algorithmus, inklusive des zu sortierende Array zurück.
      */
     @Override
     public long getSpeicherbedarf() {
@@ -116,8 +113,7 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
     }
 
     /**
-     *
-     * @return
+     * @return Gibt die Anzahl der Speicherzugriffe auf das zu sortierende Array zurück.
      */
     @Override
     public int getSchreibzugriffe() {
