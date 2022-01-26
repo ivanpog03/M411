@@ -101,7 +101,7 @@ class BST implements Sortieralgorithmus{
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return liste.length * 32 + 2 * 32;
     }
 
     /**

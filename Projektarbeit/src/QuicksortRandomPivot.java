@@ -112,7 +112,7 @@ public class QuicksortRandomPivot implements Sortieralgorithmus{
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return length * 32 + 6 * 32;
     }
 
     /**

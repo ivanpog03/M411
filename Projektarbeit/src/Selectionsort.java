@@ -64,7 +64,7 @@ public class Selectionsort implements Sortieralgorithmus{
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return length * 32 + 3 * 32;
     }
 
     /**

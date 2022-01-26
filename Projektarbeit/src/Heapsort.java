@@ -7,6 +7,7 @@ public class Heapsort implements Sortieralgorithmus{
     private int vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
+    private int speicherbedarf;
 
 
     /**
@@ -20,12 +21,14 @@ public class Heapsort implements Sortieralgorithmus{
         zeit = System.nanoTime();
         heapSort(liste);
         zeit = (System.nanoTime() - zeit)/ 1_000_000_000.0;
+        speicherbedarf = liste.length * 32 + 4 * 32;
         return liste;
     }
 
     /**
-     *
-     * @param liste
+     * Mittels fori-Schleife ruft diese Methode die methode tausche() und versickern() für
+     * jedes Element in der Liste auf.
+     * @param liste Liste, welche sortiert werden soll.
      */
     private void heapSort(int[] liste) {
         BuildMaxHeap(liste);
@@ -38,8 +41,7 @@ public class Heapsort implements Sortieralgorithmus{
     }
 
     /**
-     *
-     * @param liste
+     * @param liste Liste, welche sortiert wird.
      */
     private void BuildMaxHeap(int[] liste) {
         for(int i = (liste.length / 2) - 1; i >= 0 ; i--) {
@@ -51,7 +53,7 @@ public class Heapsort implements Sortieralgorithmus{
 
     /**
      *
-     * @param liste
+     * @param liste Liste, welche sortiert wird.
      * @param i
      * @param j
      */
@@ -78,7 +80,7 @@ public class Heapsort implements Sortieralgorithmus{
 
     /**
      *
-     * @param arr
+     * @param arr Liste welche sortiert wird.
      * @param i
      * @param kindIndex
      */
@@ -111,7 +113,7 @@ public class Heapsort implements Sortieralgorithmus{
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return speicherbedarf;
     }
 
     /**
