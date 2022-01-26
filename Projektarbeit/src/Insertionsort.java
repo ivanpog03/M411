@@ -12,7 +12,8 @@ public class Insertionsort implements Sortieralgorithmus {
     private int[] liste;
 
     /**
-     *
+     *Die Methode gibt den Benötigten Attributen ihren wert und startet den Algorithmus mittels
+     * aufruf der methode insertion().
      * @param liste
      * @return
      */
@@ -27,7 +28,8 @@ public class Insertionsort implements Sortieralgorithmus {
     }
 
     /**
-     *
+     * Die Logik des Insertionsorts. Mittelso fori-Schleifen werden Die Werte iteriert und
+     * verglichen un wenn nötig vertauscht.
      */
     private void insertionsort() {
         int b;

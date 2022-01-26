@@ -41,6 +41,7 @@ public class Heapsort implements Sortieralgorithmus{
     }
 
     /**
+     * Mittels fori-Schlaufe wird die Methode versickern() aufgerufen.
      * @param liste Liste, welche sortiert wird.
      */
     private void BuildMaxHeap(int[] liste) {
