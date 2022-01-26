@@ -1,4 +1,6 @@
 /**
+ * Der Binäre Suchbaum (Binary search tree) Sortieralgorithmus ist instabil.
+ * Die Komplexität liegt in jedem Fall, wie bei dem Heapsort, bei O(n * log(n)).
  * @author Hermann Witte
  */
 class BST implements Sortieralgorithmus{

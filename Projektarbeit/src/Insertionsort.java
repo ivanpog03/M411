@@ -1,4 +1,7 @@
 /**
+ * Der Insertionsort arbeitet nach dem stabilen Sortierverfahren und hat eine
+ * Komplexitöt von O(n^2) im schlechtesten und durschnittlichen Fall. Im Besten Fall
+ * hat der Algorithmus eine Komplexität von O(n).
  * @author Hermann Witte
  */
 public class Insertionsort implements Sortieralgorithmus {
