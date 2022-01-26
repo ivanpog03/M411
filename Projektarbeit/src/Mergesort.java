@@ -1,4 +1,6 @@
 /**
+ * Der Mergesort ist ein stabiler Sortieralgorithmus. Die Komplexität
+ * liegt bei egal welchem Fall bei O(n * log(n)).
  * @author Hermann Witte
  */
 public class Mergesort implements Sortieralgorithmus{

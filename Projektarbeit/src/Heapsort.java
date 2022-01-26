@@ -1,8 +1,7 @@
 /**
- * Diese Klasse Sortiert ein Array mittels Heapsort und gibt anschliessend das sortierte Array
- * zurück.
+ * Der Heapsort ist instabil obwohl er in-place arbeitet. Die Komplexität
+ * liegt in jedem Fall bei O(n * log(n)).
  * @author Hermann Witte
- * @since 12.01.20222
  */
 public class Heapsort implements Sortieralgorithmus{
     private int vergleiche = 0;

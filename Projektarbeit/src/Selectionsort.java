@@ -1,6 +1,6 @@
-import java.util.concurrent.ScheduledExecutorService;
-
 /**
+ * Der Selectionsort arbeitet in-place und ist ein instabiler Sortieralgorithmus (Grundform).
+ * Im Best-, Worst- und Averagecase hat der Selection sort eine Komplexität von O(n^2).
  * @author Hermann Witte
  * @since 12.01.2022
  *

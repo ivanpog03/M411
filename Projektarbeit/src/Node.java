@@ -1,4 +1,5 @@
 /**
+ * Node ist die Klasse für die Datenstruktur des Binary search tree Sortieralgorithmus.
  * @author Hermann Witte
  */
 class Node{

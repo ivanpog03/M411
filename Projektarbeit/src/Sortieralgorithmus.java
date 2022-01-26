@@ -14,7 +14,7 @@ public interface Sortieralgorithmus {
     }
 
     public default long getSpeicherbedarf(){
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return 0;
     }
 
     public default int getSchreibzugriffe(){

@@ -1,4 +1,7 @@
 /**
+ * Der Quicksort ist ein schneller und instabiler Sortieralgorithmus, welcher alle Werte mit dem Pivot
+ * (in diesem Fall das Erste Element des Arrays) vergleicht. Durchschnittlich werden O(n * log(n)) Vergleiche
+ * benötigt. Im schlechtesten Fall sind es O(n^2) und im besten Fall O(n * log(n)).
  * @author Hermann Witte
  */
 public class QuicksortFirstPivot implements Sortieralgorithmus{
