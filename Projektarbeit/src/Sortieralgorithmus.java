@@ -5,7 +5,7 @@ public interface Sortieralgorithmus {
         return null;
     }
 
-    public default int getVergleiche(){
+    public default long getVergleiche(){
         return 0;
     }
 

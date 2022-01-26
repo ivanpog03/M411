@@ -5,14 +5,15 @@
  * @author Hermann Witte
  */
 public class Insertionsort implements Sortieralgorithmus {
-    private int vergleiche = 0;
+    private long vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
     private int length;
     private int[] liste;
 
     /**
-     *
+     *Die Methode gibt den Benötigten Attributen ihren wert und startet den Algorithmus mittels
+     * aufruf der methode insertion().
      * @param liste
      * @return
      */
@@ -27,7 +28,8 @@ public class Insertionsort implements Sortieralgorithmus {
     }
 
     /**
-     *
+     * Die Logik des Insertionsorts. Mittelso fori-Schleifen werden Die Werte iteriert und
+     * verglichen un wenn nötig vertauscht.
      */
     private void insertionsort() {
         int b;
@@ -54,7 +56,7 @@ public class Insertionsort implements Sortieralgorithmus {
      * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
      */
     @Override
-    public int getVergleiche() {
+    public long getVergleiche() {
         return vergleiche;
     }
 
@@ -71,7 +73,7 @@ public class Insertionsort implements Sortieralgorithmus {
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return length * 32 + 3 * 32;
     }
 
     /**

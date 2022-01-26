@@ -4,7 +4,7 @@
  * @author Hermann Witte
  */
 class BST implements Sortieralgorithmus{
-    private static int vergleiche = 0;
+    private static long vergleiche = 0;
     private double zeit;
     private static int schreibzugriffe = 0;
     private int[] liste;
@@ -84,7 +84,7 @@ class BST implements Sortieralgorithmus{
      * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
      */
     @Override
-    public int getVergleiche() {
+    public long getVergleiche() {
         return vergleiche;
     }
 
@@ -101,7 +101,7 @@ class BST implements Sortieralgorithmus{
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return liste.length * 32 + 2 * 32;
     }
 
     /**

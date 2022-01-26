@@ -6,7 +6,7 @@
  *
  */
 public class Selectionsort implements Sortieralgorithmus{
-    private int vergleiche = 0;
+    private long vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
     private int length;
@@ -47,7 +47,7 @@ public class Selectionsort implements Sortieralgorithmus{
      * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
      */
     @Override
-    public int getVergleiche() {
+    public long getVergleiche() {
         return vergleiche;
     }
 
@@ -64,7 +64,7 @@ public class Selectionsort implements Sortieralgorithmus{
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return length * 32 + 3 * 32;
     }
 
     /**

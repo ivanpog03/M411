@@ -5,12 +5,14 @@
  * @author Hermann Witte
  */
 public class QuicksortFirstPivot implements Sortieralgorithmus{
-    private int vergleiche = 0;
+    private long vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
     private int length;
 
     /**
+     * Diese Methode dient zu der Wertzuweisung der Attribute und ruft de Methode Quicksort auf,
+     * um den Algorithmus zu starten. Ausserdem wird die Zeit gemessen.
      * @param liste Die zu sortierende Liste als Array.
      * @return Gibt die Sortierte Liste als Array zurück.
      */
@@ -24,11 +26,13 @@ public class QuicksortFirstPivot implements Sortieralgorithmus{
     }
 
     /**
-     *
+     * Die Methode überprüft mittels fori Schleife ob die Werte kleiner als der Pivot sind
+     * und verschiebt diese dann im Array. Der Rückgabewert ist wichtig für den erneuten
+     * Aufruf der Methode, da der Start- und Ende-Index angepasst werden können
      * @param liste Die zu sortierende Liste
-     * @param start
-     * @param end
-     * @return
+     * @param start Der Start-Index des Arrays
+     * @param end Der Ende-Index des Arrays
+     * @return P1 -> Wichtig für erneuten aufruf der Methode (Start- & Ende-Index)
      */
     int partition(int[] liste, int start, int end) {
         int pivot = liste[start];
@@ -54,10 +58,13 @@ public class QuicksortFirstPivot implements Sortieralgorithmus{
     }
 
     /**
-     *
+     * Die Methode ruft sich mittels Rekursion so lange auf, bis es einmal jeden, ausser
+     * den letzten Wert aus dem Array durchlaufen hat. Die Methode ruft dann jeweils
+     * die Methode partition() mit verschiedenen Start- und Ende-Indexen auf. Dies
+     * funktioniert mittels dem p1-Attribut.
      * @param liste Die zu sortierende Liste
-     * @param start
-     * @param end
+     * @param start Start-Index für Aufruf der Methode partition()
+     * @param end Ende-Index für Aufruf der Methode partition()
      */
     void quicksort(int liste[], int start, int end) {
         int p1;
@@ -73,7 +80,7 @@ public class QuicksortFirstPivot implements Sortieralgorithmus{
      * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
      */
     @Override
-    public int getVergleiche() {
+    public long getVergleiche() {
         return vergleiche;
     }
 
@@ -90,7 +97,7 @@ public class QuicksortFirstPivot implements Sortieralgorithmus{
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return length * 32 + 4 * 32;
     }
 
     /**

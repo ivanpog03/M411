@@ -4,9 +4,10 @@
  * @author Hermann Witte
  */
 public class Mergesort implements Sortieralgorithmus{
-    private int vergleiche = 0;
+    private long vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
+    private int speicherbedarf;
 
     /**
      * Die Methode gibt den Benötigten Attributen ihren wert und startet den Algorithmus mittels
@@ -20,6 +21,7 @@ public class Mergesort implements Sortieralgorithmus{
         liste = mergesort(liste);
         schreibzugriffe++;
         zeit = (System.nanoTime() - zeit)/ 1_000_000_000.0;
+        speicherbedarf = liste.length * 32 * 4 + 4 * 32;
         return liste;
     }
 
@@ -110,7 +112,7 @@ public class Mergesort implements Sortieralgorithmus{
      * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
      */
     @Override
-    public int getVergleiche() {
+    public long getVergleiche() {
         return vergleiche;
     }
 
@@ -127,7 +129,7 @@ public class Mergesort implements Sortieralgorithmus{
      */
     @Override
     public long getSpeicherbedarf() {
-        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        return speicherbedarf;
     }
 
     /**
