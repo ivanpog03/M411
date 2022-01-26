@@ -8,7 +8,7 @@
 public class Selectionsort implements Sortieralgorithmus{
     private long vergleiche = 0;
     private double zeit;
-    private int schreibzugriffe = 0;
+    private long schreibzugriffe = 0;
     private int length;
 
 
@@ -71,7 +71,7 @@ public class Selectionsort implements Sortieralgorithmus{
      * @return Gibt die Anzahl der Speicherzugriffe auf das zu sortierende Array zurück.
      */
     @Override
-    public int getSchreibzugriffe() {
+    public long getSchreibzugriffe() {
         return schreibzugriffe;
     }
 }

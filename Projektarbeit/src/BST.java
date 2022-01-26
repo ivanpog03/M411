@@ -6,7 +6,7 @@
 class BST implements Sortieralgorithmus{
     private static long vergleiche = 0;
     private double zeit;
-    private static int schreibzugriffe = 0;
+    private static long schreibzugriffe = 0;
     private int[] liste;
     private int cntr = 0;
     Node node;
@@ -108,7 +108,7 @@ class BST implements Sortieralgorithmus{
      * @return Gibt die Anzahl der Speicherzugriffe auf das zu sortierende Array zurück.
      */
     @Override
-    public int getSchreibzugriffe() {
+    public long getSchreibzugriffe() {
         return schreibzugriffe;
     }
 }

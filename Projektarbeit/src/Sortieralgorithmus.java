@@ -17,7 +17,7 @@ public interface Sortieralgorithmus {
         return 0;
     }
 
-    public default int getSchreibzugriffe(){
+    public default long getSchreibzugriffe(){
         return 0;
     }
 }
