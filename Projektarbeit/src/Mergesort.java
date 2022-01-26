@@ -4,7 +4,7 @@
  * @author Hermann Witte
  */
 public class Mergesort implements Sortieralgorithmus{
-    private int vergleiche = 0;
+    private long vergleiche = 0;
     private double zeit;
     private int schreibzugriffe = 0;
     private int speicherbedarf;
@@ -112,7 +112,7 @@ public class Mergesort implements Sortieralgorithmus{
      * @return Gibt die Anzahl der vergleiche, welcher der Algorithmus benötigt zurück.
      */
     @Override
-    public int getVergleiche() {
+    public long getVergleiche() {
         return vergleiche;
     }
 
