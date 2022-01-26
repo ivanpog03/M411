@@ -138,7 +138,6 @@ public class KUI{
         sheetQicksortRandomPivot.getRow(3).createCell(i).setCellValue(quicksortrandompivot.getSpeicherbedarf());
         sheetQicksortRandomPivot.getRow(4).createCell(i).setCellValue(quicksortrandompivot.getSchreibzugriffe());
 
-
     }
 
     /**
